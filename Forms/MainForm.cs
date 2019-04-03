@@ -228,8 +228,39 @@ namespace LajiPwd
 		}
 		void Export(object sender, EventArgs e)
 		{
-			Data.Export();
-			status.Text = "Saved password.json";
+			var dialog = new SaveFileDialog();
+			
+			dialog.FileName = "password.json";
+			dialog.Filter = "LajiPwd json|*.json";
+			dialog.InitialDirectory = ".";
+			dialog.ShowDialog(this);
+			
+			Data.Export(dialog.FileName);
+			status.Text = "Exported";
+		}
+		void Import(object sender, EventArgs e)
+		{
+			var dialog = new OpenFileDialog();
+			dialog.FileName = "password.json";
+			dialog.Filter = "LajiPwd json|*.json";
+			dialog.InitialDirectory = ".";
+			dialog.Multiselect = false;
+			
+			dialog.ShowDialog(this);
+			
+			string j_text;
+			using (var stream = new StreamReader(dialog.FileName))
+			{
+				j_text = stream.ReadToEnd();
+			}
+			
+			var list = Newtonsoft.Json.JsonConvert.DeserializeObject<List<DataEntity>>(j_text);
+			
+			Data.Import(list);
+			
+			LoadData();
+			
+			status.Text = "Imported";
 		}
 	}
 }

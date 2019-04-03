@@ -210,5 +210,18 @@ namespace LajiPwd
 			}
 			
 		}
+		
+		public static void Import(List<DataEntity> input)
+		{
+			using (var t = connection.BeginTransaction()) {
+				
+				foreach (var item in input)
+				{
+					Insert(item);
+				}
+				
+				t.Commit();
+			}
+		}
 	}
 }

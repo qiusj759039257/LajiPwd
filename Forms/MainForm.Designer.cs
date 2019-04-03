@@ -49,6 +49,7 @@ namespace LajiPwd
 		private System.Windows.Forms.ToolTip toolTip1;
 		private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -84,6 +85,8 @@ namespace LajiPwd
 			this.changeMasterKeyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.status = new System.Windows.Forms.ToolStripStatusLabel();
@@ -105,8 +108,7 @@ namespace LajiPwd
 			this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.button6 = new System.Windows.Forms.Button();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-			this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
@@ -216,6 +218,22 @@ namespace LajiPwd
 			this.exitToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
 			this.exitToolStripMenuItem.Text = "Exit";
 			this.exitToolStripMenuItem.Click += new System.EventHandler(this.Exit);
+			// 
+			// databaseToolStripMenuItem
+			// 
+			this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.exportToolStripMenuItem,
+			this.importToolStripMenuItem});
+			this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+			this.databaseToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
+			this.databaseToolStripMenuItem.Text = "Database";
+			// 
+			// exportToolStripMenuItem
+			// 
+			this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+			this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exportToolStripMenuItem.Text = "Export";
+			this.exportToolStripMenuItem.Click += new System.EventHandler(this.Export);
 			// 
 			// statusStrip1
 			// 
@@ -400,20 +418,12 @@ namespace LajiPwd
 			this.button6.UseVisualStyleBackColor = true;
 			this.button6.Click += new System.EventHandler(this.DeletePassword);
 			// 
-			// databaseToolStripMenuItem
+			// importToolStripMenuItem
 			// 
-			this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.exportToolStripMenuItem});
-			this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
-			this.databaseToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
-			this.databaseToolStripMenuItem.Text = "Database";
-			// 
-			// exportToolStripMenuItem
-			// 
-			this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-			this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.exportToolStripMenuItem.Text = "Export";
-			this.exportToolStripMenuItem.Click += new System.EventHandler(this.Export);
+			this.importToolStripMenuItem.Name = "importToolStripMenuItem";
+			this.importToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.importToolStripMenuItem.Text = "Import";
+			this.importToolStripMenuItem.Click += new System.EventHandler(this.Import);
 			// 
 			// MainForm
 			// 
