@@ -221,7 +221,7 @@ namespace LajiPwd
           		Thread.Sleep(3000);
 				
 				SendKeys.SendWait(text);
-				status.Text = "Typping done";
+				status.Text = "Typing done";
 			});
 			
 			t.Start();

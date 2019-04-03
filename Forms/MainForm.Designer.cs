@@ -46,6 +46,7 @@ namespace LajiPwd
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripStatusLabel status;
 		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.ToolTip toolTip1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -101,6 +102,7 @@ namespace LajiPwd
 			this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.button6 = new System.Windows.Forms.Button();
+			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
@@ -241,6 +243,7 @@ namespace LajiPwd
 			this.button1.Size = new System.Drawing.Size(80, 30);
 			this.button1.TabIndex = 4;
 			this.button1.Text = "New";
+			this.toolTip1.SetToolTip(this.button1, "Create a new password");
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.NewPassword);
 			// 
@@ -253,6 +256,7 @@ namespace LajiPwd
 			this.button2.Size = new System.Drawing.Size(80, 30);
 			this.button2.TabIndex = 5;
 			this.button2.Text = "Copy";
+			this.toolTip1.SetToolTip(this.button2, "Copy password to clipboard");
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.CopyPassword);
 			// 
@@ -265,6 +269,7 @@ namespace LajiPwd
 			this.button3.Size = new System.Drawing.Size(80, 30);
 			this.button3.TabIndex = 6;
 			this.button3.Text = "Modify";
+			this.toolTip1.SetToolTip(this.button3, "Modify a password");
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.ModifyPassword);
 			// 
@@ -277,6 +282,7 @@ namespace LajiPwd
 			this.button4.Size = new System.Drawing.Size(100, 30);
 			this.button4.TabIndex = 8;
 			this.button4.Text = "Type account";
+			this.toolTip1.SetToolTip(this.button4, "Auto account typing");
 			this.button4.UseVisualStyleBackColor = true;
 			this.button4.Click += new System.EventHandler(this.TypeAccount);
 			// 
@@ -289,6 +295,7 @@ namespace LajiPwd
 			this.button5.Size = new System.Drawing.Size(110, 30);
 			this.button5.TabIndex = 9;
 			this.button5.Text = "Type password";
+			this.toolTip1.SetToolTip(this.button5, "Auto password typing");
 			this.button5.UseVisualStyleBackColor = true;
 			this.button5.Click += new System.EventHandler(this.TypePassword);
 			// 
@@ -377,12 +384,14 @@ namespace LajiPwd
 			// 
 			// button6
 			// 
+			this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.button6.Location = new System.Drawing.Point(290, 442);
 			this.button6.Margin = new System.Windows.Forms.Padding(5);
 			this.button6.Name = "button6";
 			this.button6.Size = new System.Drawing.Size(80, 30);
 			this.button6.TabIndex = 7;
 			this.button6.Text = "Delete";
+			this.toolTip1.SetToolTip(this.button6, "Delete a password");
 			this.button6.UseVisualStyleBackColor = true;
 			this.button6.Click += new System.EventHandler(this.DeletePassword);
 			// 
