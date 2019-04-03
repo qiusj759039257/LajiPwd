@@ -192,5 +192,23 @@ namespace LajiPwd
 			
 			command.ExecuteNonQuery();
 		}
+		
+		public static void Export(string filename = "password.json")
+		{
+			var all = GetAll();
+			
+			foreach (var row in all)
+			{
+				row.password = Decrypt(row.password);
+			}
+			
+			var jc = Newtonsoft.Json.JsonConvert.SerializeObject(all, Newtonsoft.Json.Formatting.Indented);
+			
+			using (var stream = new StreamWriter(filename))
+			{
+				stream.Write(jc);
+			}
+			
+		}
 	}
 }

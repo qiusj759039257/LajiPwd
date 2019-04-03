@@ -47,6 +47,8 @@ namespace LajiPwd
 		private System.Windows.Forms.ToolStripStatusLabel status;
 		private System.Windows.Forms.Button button6;
 		private System.Windows.Forms.ToolTip toolTip1;
+		private System.Windows.Forms.ToolStripMenuItem databaseToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -103,6 +105,8 @@ namespace LajiPwd
 			this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.button6 = new System.Windows.Forms.Button();
 			this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+			this.databaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
@@ -122,7 +126,8 @@ namespace LajiPwd
 			// menuStrip1
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.menuToolStripMenuItem});
+			this.menuToolStripMenuItem,
+			this.databaseToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -394,6 +399,21 @@ namespace LajiPwd
 			this.toolTip1.SetToolTip(this.button6, "Delete a password");
 			this.button6.UseVisualStyleBackColor = true;
 			this.button6.Click += new System.EventHandler(this.DeletePassword);
+			// 
+			// databaseToolStripMenuItem
+			// 
+			this.databaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.exportToolStripMenuItem});
+			this.databaseToolStripMenuItem.Name = "databaseToolStripMenuItem";
+			this.databaseToolStripMenuItem.Size = new System.Drawing.Size(75, 21);
+			this.databaseToolStripMenuItem.Text = "Database";
+			// 
+			// exportToolStripMenuItem
+			// 
+			this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+			this.exportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.exportToolStripMenuItem.Text = "Export";
+			this.exportToolStripMenuItem.Click += new System.EventHandler(this.Export);
 			// 
 			// MainForm
 			// 

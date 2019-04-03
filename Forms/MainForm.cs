@@ -226,5 +226,10 @@ namespace LajiPwd
 			
 			t.Start();
 		}
+		void Export(object sender, EventArgs e)
+		{
+			Data.Export();
+			status.Text = "Saved password.json";
+		}
 	}
 }
